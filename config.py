@@ -16,7 +16,7 @@ IBOVESPA_PRESET = [
     "CSAN3.SA", "PRIO3.SA", "TOTS3.SA", "BPAC11.SA", "EMBR3.SA",
 ]
 
-BATCH_SIZE = 10  # max tickers per analysis run to avoid rate limiting
+BATCH_SIZE = 10  # max tickers per analysis run to avoid yfinance rate limiting
 
 DEFAULT_PERIOD = "1y"
 DEFAULT_INTERVAL = "1d"
