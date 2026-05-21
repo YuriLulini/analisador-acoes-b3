@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/yuri/Projetos_Cloude/ProjetoClaudeCode_1/stock_analyzer/.claude/auto_push.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

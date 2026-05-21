@@ -73,3 +73,34 @@ data/b3_stocks.py   →   data/fetcher.py   →   analysis/   →   charts/   �
 | `reports/output/` | Generated HTML charts and report | no TTL |
 
 To force a fresh download, pass `force_refresh=True` to `fetch_price_history()` / `fetch_all_stocks()`, or `force_refresh=True` to `fetch_b3_stock_list()`.
+
+## GitHub repository
+
+**URL:** https://github.com/YuriLulini/analisador-acoes-b3
+
+**Auto-push hook:** every time Claude Code edits or writes a file, the hook `.claude/auto_push.sh` runs automatically and pushes the changes to `main`. This is configured in `.claude/settings.json` via `PostToolUse` on `Edit|Write` events.
+
+The `gh` CLI binary lives at `~/.local/bin/gh` (installed without sudo). If it stops working, reinstall:
+
+```bash
+curl -fsSL "https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_macOS_arm64.zip" -o /tmp/gh.zip
+cd /tmp && unzip -q gh.zip
+cp /tmp/gh_2.92.0_macOS_arm64/bin/gh ~/.local/bin/gh
+chmod +x ~/.local/bin/gh
+~/.local/bin/gh auth login --web
+```
+
+**Manual push** (if needed):
+
+```bash
+cd stock_analyzer
+git add -A && git commit -m "mensagem" && git push origin main
+```
+
+**Check push history:**
+
+```bash
+cd stock_analyzer && git log --oneline -10
+```
+
+`.claude/auto_push.sh` silently skips the push if there are no staged changes, so it is safe to run at any time.
