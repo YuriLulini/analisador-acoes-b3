@@ -28,8 +28,8 @@ SCORE_WEIGHTS = {
     "dividend_yield": 0.20,
 }
 
-RSI_OVERSOLD = 30   # abaixo → sobrevendido
-RSI_OVERBOUGHT = 70  # acima → sobrecomprado
+RSI_OVERSOLD = 30
+RSI_OVERBOUGHT = 70
 
 RECOMMENDATION_THRESHOLDS = {
     "buy": 65,
