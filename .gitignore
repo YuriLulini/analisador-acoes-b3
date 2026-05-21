@@ -1,0 +1,14 @@
+# Cache e banco de dados gerados em runtime
+data/cache/
+reports/output/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# macOS
+.DS_Store
